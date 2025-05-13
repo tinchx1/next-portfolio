@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import type { PropsWithChildren } from 'react'
-
+import { NextIntlClientProvider } from 'next-intl'
 import { siteConfig } from '@/config'
-
+import { getLocale } from 'next-intl/server'
 import { ThemeProvider } from './provider'
 
 import './globals.css'
@@ -17,13 +17,17 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = siteConfig
 
-const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
+const RootLayout = async ({ children }: Readonly<PropsWithChildren>) => {
+  const locale = await getLocale()
+
   return (
-    <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
+    <html lang={locale} className="dark" style={{ colorScheme: 'dark' }}>
       <body className={inter.className}>
+        <NextIntlClientProvider>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           {children}
         </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
