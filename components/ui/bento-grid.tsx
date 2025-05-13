@@ -1,23 +1,23 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import { IoCopyOutline } from 'react-icons/io5'
+import Lottie from 'lottie-react'
 
-import { links } from "@/config";
-import { techStack } from "@/data";
-import animationData from "@/data/confetti.json";
-import { cn } from "@/lib/utils";
+import { links } from '@/config'
+import { techStack } from '@/data'
+import animationData from '@/data/confetti.json'
+import { cn } from '@/lib/utils'
 
-import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import { MagicButton } from "./magic-button";
+import { BackgroundGradientAnimation } from './background-gradient-animation'
+import { MagicButton } from './magic-button'
 
-import { GridGlobe } from "../grid-globe";
+import { GridGlobe } from '../grid-globe'
 
 export const BentoGrid = ({
   className,
-  children,
+  children
 }: {
   className?: string;
   children?: React.ReactNode;
@@ -25,14 +25,14 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-5",
+        'mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-5',
         className
       )}
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
 export const BentoGridItem = ({
   id,
@@ -42,7 +42,7 @@ export const BentoGridItem = ({
   img,
   imgClassName,
   titleClassName,
-  spareImg,
+  spareImg
 }: {
   id?: number;
   className?: string;
@@ -53,36 +53,36 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(links.ownerEmail);
-    setCopied(true);
-  };
+    navigator.clipboard.writeText(links.ownerEmail)
+    setCopied(true)
+  }
 
   useEffect(() => {
-    if (!copied) return;
+    if (!copied) return
 
     const copyTimeout = setTimeout(() => {
-      setCopied(false);
-    }, 3500);
+      setCopied(false)
+    }, 3500)
 
-    return () => clearTimeout(copyTimeout);
-  }, [copied]);
+    return () => clearTimeout(copyTimeout)
+  }, [copied])
 
   return (
     <div
       className={cn(
-        "group/bento relative row-span-1 flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] shadow-input transition duration-200 hover:shadow-xl dark:shadow-none",
+        'group/bento relative row-span-1 flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] shadow-input transition duration-200 hover:shadow-xl dark:shadow-none',
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
+        background: 'rgb(4,7,29)',
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)'
       }}
     >
-      <div className={cn("h-full", id === 6 && "flex justify-center")}>
+      <div className={cn('h-full', id === 6 && 'flex justify-center')}>
         <div className="absolute h-full w-full">
           {img && (
             <Image
@@ -90,15 +90,15 @@ export const BentoGridItem = ({
               height={541}
               src={img}
               alt={img}
-              className={cn("object-cover object-center", imgClassName)}
+              className={cn('object-cover object-center', imgClassName)}
             />
           )}
         </div>
 
         <div
           className={cn(
-            "absolute right-0 -mb-5",
-            id === 5 && "w-full opacity-80"
+            'absolute right-0 -mb-5',
+            id === 5 && 'w-full opacity-80'
           )}
         >
           {spareImg && (
@@ -116,7 +116,7 @@ export const BentoGridItem = ({
 
         <div
           className={cn(
-            "relative flex min-h-40 flex-col p-5 px-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:p-10",
+            'relative flex min-h-40 flex-col p-5 px-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:p-10',
             titleClassName
           )}
         >
@@ -171,14 +171,14 @@ export const BentoGridItem = ({
                     autoplay: copied,
                     animationData,
                     rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice",
-                    },
+                      preserveAspectRatio: 'xMidYMid slice'
+                    }
                   }}
                 />
               </button>
 
               <MagicButton
-                title={copied ? "Email copied!" : "Copy my email"}
+                title={copied ? 'Email copied!' : 'Copy my email'}
                 icon={<IoCopyOutline />}
                 otherClasses="!bg-[#161a31]"
                 handleClick={handleCopy}
@@ -189,5 +189,5 @@ export const BentoGridItem = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

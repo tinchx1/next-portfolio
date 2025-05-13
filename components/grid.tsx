@@ -1,5 +1,5 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { gridItems } from "@/data";
+import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
+import { gridItems } from '@/data'
 
 export const Grid = () => {
   return (
@@ -10,5 +10,5 @@ export const Grid = () => {
         ))}
       </BentoGrid>
     </section>
-  );
-};
+  )
+}

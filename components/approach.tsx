@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import { MagicButton } from "@/components/ui/magic-button";
+import { CanvasRevealEffect } from '@/components/ui/canvas-reveal-effect'
+import { MagicButton } from '@/components/ui/magic-button'
 
 export const Approach = () => {
   return (
@@ -35,7 +35,7 @@ export const Approach = () => {
             containerClassName="bg-black"
             colors={[
               [236, 72, 153],
-              [232, 121, 249],
+              [232, 121, 249]
             ]}
             dotSize={2}
           />
@@ -54,8 +54,8 @@ export const Approach = () => {
         </Card>
       </div>
     </section>
-  );
-};
+  )
+}
 
 type CardProps = {
   title: string;
@@ -65,7 +65,7 @@ type CardProps = {
 };
 
 const Card = ({ title, description, icon, children }: CardProps) => {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState(false)
 
   return (
     <div
@@ -102,17 +102,17 @@ const Card = ({ title, description, icon, children }: CardProps) => {
         <p
           className="relative z-10 mt-4 text-sm font-bold text-black opacity-0 transition  duration-200 group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100 dark:text-white"
           style={{
-            color: "#e4ecff",
+            color: '#e4ecff'
           }}
         >
           {description}
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export const Icon = ({ className, ...props }: any) => {
+export const Icon = ({ className, ...props }: { className: string; [key: string]: unknown }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -125,5 +125,5 @@ export const Icon = ({ className, ...props }: any) => {
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
     </svg>
-  );
-};
+  )
+}

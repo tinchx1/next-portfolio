@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { companies, testimonials } from "@/data";
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards'
+import { companies, testimonials } from '@/data'
 
 export const Clients = () => {
   return (
@@ -42,5 +42,5 @@ export const Clients = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

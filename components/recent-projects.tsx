@@ -1,16 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FaLocationArrow } from "react-icons/fa6";
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaLocationArrow } from 'react-icons/fa6'
 
-import { projects } from "@/data";
+import { projects } from '@/data'
 
-import { PinContainer } from "./ui/3d-pin";
+import { PinContainer } from './ui/3d-pin'
 
 export const RecentProjects = () => {
   return (
     <section id="projects" className="py-20">
       <h1 className="heading">
-        A small selection of{" "}
+        A small selection of{' '}
         <span className="text-purple">recent projects</span>
       </h1>
 
@@ -56,7 +56,7 @@ export const RecentProjects = () => {
                         key={icon}
                         className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.2] bg-black lg:h-10 lg:w-10"
                         style={{
-                          transform: `translateX(-${5 * i * 2}px)`,
+                          transform: `translateX(-${5 * i * 2}px)`
                         }}
                       >
                         <Image
@@ -89,5 +89,5 @@ export const RecentProjects = () => {
         )}
       </div>
     </section>
-  );
-};
+  )
+}

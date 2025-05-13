@@ -1,31 +1,32 @@
-"use client";
+'use client'
 
 import {
   motion,
   useAnimationFrame,
   useMotionTemplate,
   useMotionValue,
-  useTransform,
-} from "framer-motion";
-import { useRef } from "react";
+  useTransform
+} from 'framer-motion'
+import { useRef } from 'react'
+import { ElementType, ReactNode, ComponentPropsWithoutRef } from 'react'
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
-type ButtonProps = {
-  borderRadius?: string;
-  children: React.ReactNode;
-  as?: any;
-  containerClassName?: string;
-  borderClassName?: string;
-  duration?: number;
-  className?: string;
-  [key: string]: any;
-};
+type ButtonProps<C extends ElementType = 'button'> = {
+  as?: C
+  children: ReactNode
+  borderRadius?: string
+  containerClassName?: string
+  borderClassName?: string
+  duration?: number
+  className?: string
+} & ComponentPropsWithoutRef<C>
+
 
 export const Button = ({
-  borderRadius = "1.75rem",
+  borderRadius = '1.75rem',
   children,
-  as: Component = "button",
+  as: Component = 'button',
   containerClassName,
   borderClassName,
   duration,
@@ -35,11 +36,11 @@ export const Button = ({
   return (
     <Component
       className={cn(
-        "relative overflow-hidden bg-transparent p-[1px] text-xl md:col-span-2",
-        containerClassName
+        'relative overflow-hidden bg-transparent p-[1px] text-xl md:col-span-2',
+        containerClassName as string
       )}
       style={{
-        borderRadius: borderRadius,
+        borderRadius: borderRadius as string
       }}
       {...otherProps}
     >
@@ -50,7 +51,7 @@ export const Button = ({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)] opacity-[0.8]",
+              'h-20 w-20 bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)] opacity-[0.8]',
               borderClassName
             )}
           />
@@ -59,25 +60,25 @@ export const Button = ({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl",
+          'relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl',
           className
         )}
         style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
+          borderRadius: `calc(${borderRadius} * 0.96)`
         }}
       >
         {children}
       </div>
     </Component>
-  );
-};
+  )
+}
 
 type MovingBorderProps = {
   children: React.ReactNode;
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export const MovingBorder = ({
@@ -87,27 +88,29 @@ export const MovingBorder = ({
   ry,
   ...otherProps
 }: MovingBorderProps) => {
-  const pathRef = useRef<any>();
-  const progress = useMotionValue<number>(0);
+  const pathRef = useRef<SVGRectElement>(null)  
+  const progress = useMotionValue<number>(0)
 
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
+    const length = pathRef.current?.getTotalLength()
+
     if (length) {
-      const pxPerMillisecond = length / duration;
-      progress.set((time * pxPerMillisecond) % length);
+      const pxPerMillisecond = length / duration
+
+      progress.set((time * pxPerMillisecond) % length)
     }
-  });
+  })
 
   const x = useTransform(
     progress,
     (val) => pathRef.current?.getPointAtLength(val).x
-  );
+  )
   const y = useTransform(
     progress,
     (val) => pathRef.current?.getPointAtLength(val).y
-  );
+  )
 
-  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
+  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`
 
   return (
     <>
@@ -130,15 +133,15 @@ export const MovingBorder = ({
       </svg>
       <motion.div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 0,
           left: 0,
-          display: "inline-block",
-          transform,
+          display: 'inline-block',
+          transform
         }}
       >
         {children}
       </motion.div>
     </>
-  );
-};
+  )
+}

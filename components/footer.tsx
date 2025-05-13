@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FaLocationArrow } from "react-icons/fa6";
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaLocationArrow } from 'react-icons/fa6'
 
-import { MagicButton } from "@/components/ui/magic-button";
-import { links } from "@/config";
-import { socialMedia } from "@/data";
+import { MagicButton } from '@/components/ui/magic-button'
+import { links } from '@/config'
+import { socialMedia } from '@/data'
 
 export const Footer = () => {
   return (
@@ -47,7 +47,7 @@ export const Footer = () => {
 
       <div className="relative z-[999] mt-16 flex flex-col items-center justify-between md:flex-row">
         <p className="text-sm font-light md:text-base md:font-normal">
-          Copyright &copy; {new Date().getFullYear()}{" "}
+          Copyright &copy; {new Date().getFullYear()}{' '}
           <Link
             href="https://sanidhy.me"
             target="_blank"
@@ -55,8 +55,8 @@ export const Footer = () => {
             className="text-purple"
           >
             Sanidhya
-          </Link>{" "}
-          |{" "}
+          </Link>{' '}
+          |{' '}
           <Link href={links.sourceCode} className="underline">
             Source Code
           </Link>
@@ -83,5 +83,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

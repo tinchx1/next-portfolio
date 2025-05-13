@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { Button } from "@/components/ui/moving-borders";
-import { workExperience } from "@/data";
+import { Button } from '@/components/ui/moving-borders'
+import { workExperience } from '@/data'
 
 export const Experience = () => {
   return (
@@ -40,5 +40,5 @@ export const Experience = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
