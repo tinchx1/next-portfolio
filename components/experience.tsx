@@ -2,15 +2,40 @@ import Image from 'next/image'
 
 import { Button } from '@/components/ui/moving-borders'
 import { workExperience } from '@/data'
+import { companies } from '@/data'
+import Link from 'next/link'
 
 export const Experience = () => {
+
   return (
     <section id="experience" className="py-20">
       <h1 className="heading">
         My <span className="text-purple">work experience</span>
       </h1>
-
-      <div className="mt-12 grid w-full grid-cols-1 gap-10 lg:grid-cols-4">
+      <div className="flex  flex-wrap items-center justify-center gap-8 md:gap-16">
+        {companies.map(({ id, name, nameImg, link }) => (
+          <div key={id} className="flex max-w-32 gap-2 md:max-w-60">
+            {/* {img && <Image
+              height={29}
+              width={43}
+              src={img}
+              alt={`${name}'s logo`}
+              className="w-5 md:w-10"
+            />} */}
+        <Link
+        href={link}>
+            <Image
+              height={28}
+              width={131}
+              src={nameImg}
+              alt={name}
+              className="w-20 md:w-24"
+              />
+              </Link>
+          </div>
+        ))}
+      </div>
+      <div className=" grid w-full grid-cols-1 gap-10 lg:grid-cols-4">
         {workExperience.map((experience) => (
           <Button
             key={experience.id}

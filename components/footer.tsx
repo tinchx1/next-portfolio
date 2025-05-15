@@ -49,17 +49,17 @@ export const Footer = () => {
         <p className="text-sm font-light md:text-base md:font-normal">
           Copyright &copy; {new Date().getFullYear()}{' '}
           <Link
-            href="https://sanidhy.me"
+            href="https://github.com/tinchx1"
             target="_blank"
             rel="noreferrer noopener"
             className="text-purple"
           >
-            Sanidhya
+            tinchx1
           </Link>{' '}
-          |{' '}
-          <Link href={links.sourceCode} className="underline">
+          {/* |{' '} */}
+          {/* <Link href={links.sourceCode} className="underline">
             Source Code
-          </Link>
+          </Link> */}
         </p>
 
         <div className="flex items-center gap-6 md:gap-3">
