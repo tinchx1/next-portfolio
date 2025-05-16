@@ -1,5 +1,5 @@
 export const navItems = [
-  { key: 'about', link: '#about' },
+  // { key: 'about', link: '#about' },
   { key: 'projects', link: '#projects' },
   { key: 'testimonials', link: '#testimonials' },
   { key: 'contact', link: '#contact' }

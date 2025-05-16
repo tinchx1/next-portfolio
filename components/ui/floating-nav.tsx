@@ -72,7 +72,7 @@ export const FloatingNav = ({ className }: FloatingNavProps) => {
               'relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300'
             )}
           >
-            <span className="!cursor-pointer text-sm">{t(navItem.key)}</span>
+            <span className="!cursor-pointer text-sm whitespace-nowrap">{t(navItem.key)}</span>
           </Link>
         ))}
         <select
