@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { testimonials } from '@/data'
 import { cn } from '@/lib/utils'
@@ -22,6 +23,7 @@ export const InfiniteMovingCards = ({
   const containerRef = useRef<HTMLDivElement>(null)
   const scrollerRef = useRef<HTMLUListElement>(null)
   const [start, setStart] = useState(false)
+  const t = useTranslations('data.testimonials')
   const addAnimation = () => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children)
@@ -70,7 +72,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation()
-     
+
   }, [])
 
   return (
@@ -105,7 +107,7 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               />
               <span className=" relative z-20 text-sm font-normal leading-[1.6] text-white md:text-lg">
-                {item.quote}
+                {t(`${item.id}.quote`)}
               </span>
 
               <div className="relative z-20 mt-6 flex flex-row items-center">
@@ -113,18 +115,18 @@ export const InfiniteMovingCards = ({
                   <Image
                     height={50}
                     width={50}
-                    src="/profile.svg"
-                    alt="profile"
+                    src={item.img}
+                    alt={t(`${item.id}.name`)}
                   />
                 </div>
 
                 <div className="flex flex-col gap-1">
                   <span className="text-xl font-bold leading-[1.6] text-white">
-                    {item.name}
+                    {t(`${item.id}.name`)}
                   </span>
 
                   <span className=" text-sm font-normal leading-[1.6] text-white-200">
-                    {item.title}
+                    {t(`${item.id}.title`)}
                   </span>
                 </div>
               </div>

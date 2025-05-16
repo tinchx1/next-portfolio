@@ -7,10 +7,12 @@ import { cn } from '@/lib/utils'
 
 export const TextGenerateEffect = ({
   words,
-  className
+  className,
+  // key
 }: {
   words: string;
   className?: string;
+  // key?: string;
 }) => {
   const [scope, animate] = useAnimate()
   const wordsArray = words.split(' ')
@@ -26,7 +28,7 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2)
       }
     )
-  }, [animate])
+  }, [animate, words])
 
   const renderWords = () => {
     return (

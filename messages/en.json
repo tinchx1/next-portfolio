@@ -2,5 +2,147 @@
   "home": {
     "title": "Hi, I&apos;m {links.ownerName}, a Next.js developer based in Argentina.",
     "description": "Home"
+  },
+  "Hero": {
+    "title": "Software Engineer",
+    "subtitle": "Transforming ideas into intelligent digital solutions",
+    "greeting": "Hello, I'm Martin, Full Stack Developer",
+    "argentinaAlt": "Argentina",
+    "contact": "Contact me"
+  },
+  "data": {
+    "navItems": {
+      "about": "About me",
+      "projects": "Projects",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "gridItems": {
+      "1": {
+        "title": "I prioritize collaboration with the client, fostering open communication",
+        "description": ""
+      },
+      "2": {
+        "title": "I'm very flexible with time zones",
+        "description": ""
+      },
+      "3": {
+        "title": "My technology stack",
+        "description": "I always try to improve"
+      },
+      "4": {
+        "title": "Technology enthusiast with a passion for product development.",
+        "description": ""
+      },
+      "5": {
+        "title": "I am learning to create smart contracts with Solidity",
+        "description": "Currently"
+      },
+      "6": {
+        "title": "Want to start a project together?",
+        "description": ""
+      }
+    },
+    "projects": {
+      "1": {
+        "title": "TalkSmart - An AI chat",
+        "description": "AI chat for conversing in other languages, with instant translation and context explanations."
+      },
+      "2": {
+        "title": "Trackiify - Routine manager",
+        "description": "Routine manager with dashboards for trainers and clients and a WhatsApp bot for automated tracking."
+      },
+      "3": {
+        "title": "Habitify - Habit tracker",
+        "description": "Habit tracking application designed to help users build and maintain healthy routines."
+      },
+      "4": {
+        "title": "Complex animated carousel",
+        "description": "Animated carousel with GSAP timelines, multiple animations, and mask effects with clip-path."
+      }
+    },
+    "testimonials": {
+      "1": {
+        "quote": "I had the opportunity to supervise Martin during his time on the team and it was a very positive experience. From the first moment he showed great proactivity and commitment, especially in Front-End development. He stood out for his ability to solve problems independently and for his constant willingness to improve both technically and in team dynamics. He is a person with a very professional attitude, with whom it is a pleasure to work.",
+        "name": "Ignacio Martín Lopez",
+        "title": "Front End Lead at SwaplyAr"
+      },
+      "2": {
+        "quote": "Collaborating with Martin was a true pleasure. His professionalism, speed, and dedication to achieving exceptional results were evident throughout our project. Martin's enthusiasm for every facet of development is truly exceptional. If you are looking to boost your website and your brand, Martin is the ideal partner.",
+        "name": "Oa Suarez",
+        "title": "CPO at SwaplyAr"
+      }
+    },
+    "workExperience": {
+      "1": {
+        "title": "Frontend Developer",
+        "description": "Conversion of Figma designs into code with fidelity and efficiency, enhancing the user experience and incorporating animations with GSAP. Refactoring code and implementing best practices."
+      },
+      "2": {
+        "title": "Full Stack Blockchain Engineer",
+        "description": "Mastery of backend workflows with Nest.js and Express, Blockchain technologies, Web3, React Testing Library, Jest, Playwright, Storybook, CI/CD, pipelines, performance with SSR/ISR, and code splitting."
+      },
+      "3": {
+        "title": "Frontend Architect",
+        "description": "Responsible for authentication, layout creation, URL architecture, and implementation of multilingual systems, optimizing access flows. Optimization of Lighthouse score and SEO."
+      },
+      "4": {
+        "title": "DevOps Experience",
+        "description": "Management of S3 storage (Cloudflare R2), orchestration with Docker, E2E testing with GitHub Actions CI/CD, deployment of databases like PostgreSQL, Supabase, MongoDB with Atlas, and Redis."
+      }
+    }
+  },
+  "RecentProjects": {
+    "heading": {
+      "part1": "A small selection of",
+      "part2": "recent projects"
+    }
+  },
+  "Approach": {
+    "heading": {
+      "part1": "My",
+      "part2": "approach"
+    },
+    "cards": {
+      "1": {
+        "title": "Planning & Strategy",
+        "button": "Phase 1",
+        "description": "We'll work together to map out the goals, target audience, and key features of your website. We'll discuss aspects such as site structure, design, architecture, navigation, and content requirements."
+      },
+      "2": {
+        "title": "Architecture, Design & User Flows Development",
+        "button": "Phase 2",
+        "description": "Once we agree on the plan, I get to work. I'll implement your website's architecture, design, and flows, ensuring it's functional, efficient, and engaging. I'll document every step of the process."
+      },
+      "3": {
+        "title": "Development & Launch",
+        "button": "Phase 3",
+        "description": "This is when the magic happens. Based on the documentation and plan, I'll translate your website's architecture, design, and flows into functional code, building your website from scratch."
+      }
+    }
+  },
+  "Clients": {
+    "heading": {
+      "part1": "Kind words from",
+      "part2": "satisfied clients"
+    }
+  },
+  "Experience": {
+    "heading": {
+      "part1": "My",
+      "part2": "work experience"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "part1": "Ready to take",
+      "part2": "your digital presence",
+      "part3": "to the next level?"
+    },
+    "contactText": "Contact me today and let's discuss how I can help you achieve your goals.",
+    "button": "Contact me",
+    "altGrid": "grid",
+    "copyright": "Copyright © {year}",
+    "authorName": "tinchx1"
   }
 }

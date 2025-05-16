@@ -2,22 +2,25 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { CanvasRevealEffect } from '@/components/ui/canvas-reveal-effect'
 import { MagicButton } from '@/components/ui/magic-button'
 
 export const Approach = () => {
+  const t = useTranslations('Approach')
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        {t('heading.part1')} {' '}
+        <span className="text-purple">{t('heading.part2')}</span>
       </h1>
 
       <div className="my-20 flex flex-col items-center justify-center gap-4 lg:flex-row">
         <Card
-          title="Planning & Strategy"
-          icon={<MagicButton title="Phase 1" asChild />}
-          description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          title={t('cards.1.title')}
+          icon={<MagicButton title={t('cards.1.button')} asChild />}
+          description={t('cards.1.description')}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -26,9 +29,9 @@ export const Approach = () => {
         </Card>
 
         <Card
-          title="Deployment & Progress Update"
-          icon={<MagicButton title="Phase 2" asChild />}
-          description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+          title={t('cards.2.title')}
+          icon={<MagicButton title={t('cards.2.button')} asChild />}
+          description={t('cards.2.description')}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -42,9 +45,9 @@ export const Approach = () => {
         </Card>
 
         <Card
-          title="Development & Launch"
-          icon={<MagicButton title="Phase 3" asChild />}
-          description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
+          title={t('cards.3.title')}
+          icon={<MagicButton title={t('cards.3.button')} asChild />}
+          description={t('cards.3.description')}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -112,7 +115,7 @@ const Card = ({ title, description, icon, children }: CardProps) => {
   )
 }
 
-export const Icon = ({ className, ...props }: { className: string; [key: string]: unknown }) => {
+export const Icon = ({ className, ...props }: { className: string;[key: string]: unknown }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

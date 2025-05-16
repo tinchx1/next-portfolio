@@ -5,8 +5,10 @@ import { Spotlight } from '@/components/ui/spotlight'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { MagicButton } from '@/components/ui/magic-button'
 import { links } from '@/config'
+import { useTranslations } from 'next-intl'
 
 export const Hero = () => {
+  const t = useTranslations('Hero')
   return (
     <div className="pb-20 pt-36">
       <div>
@@ -28,25 +30,24 @@ export const Hero = () => {
       <div className="relative z-10 my-20 flex justify-center">
         <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
           <h2 className="max-w-80 text-center text-xs uppercase tracking-widest text-blue-100">
-            Ingeniero de Software
+            {t('title')}
           </h2>
 
           <TextGenerateEffect
+            key={t('subtitle')}
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transformando ideas en soluciones digitales inteligentes"
+            words={t('subtitle')}
           />
-
-          <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-            Hola, soy {links.ownerName}, Desarrollador Full Stack de Argentina.
+          <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl flex items-center justify-center">
+            {t('greeting', { ownerName: links.ownerName })} <img className='pl-2' src="/arg.svg" alt={t('argentinaAlt')} width={36} height={36} />
           </p>
           <Link href="https://www.linkedin.com/in/martin-marchionni-16104127a/" className="md:mt-10">
-
             <MagicButton
-              title="Contactame"
+              title={t('contact')}
               icon={<FaLocationArrow />}
               position="right"
               asChild
-              />
+            />
           </Link>
         </div>
       </div>

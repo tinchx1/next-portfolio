@@ -1,0 +1,148 @@
+{
+  "home": {
+    "title": "Hola, soy {links.ownerName}, un desarrollador Next.js basado en Argentina.",
+    "description": "Home"
+  },
+  "Hero": {
+    "title": "Ingeniero de Software",
+    "subtitle": "Transformando ideas en soluciones digitales inteligentes",
+    "greeting": "Hola, soy Martin, Desarrollador Full Stack",
+    "argentinaAlt": "Argentina",
+    "contact": "Contactame"
+  },
+  "data": {
+    "navItems": {
+      "about": "Sobre mi",
+      "projects": "Proyectos",
+      "testimonials": "Testimonios",
+      "contact": "Contacto"
+    },
+    "gridItems": {
+      "1": {
+        "title": "Priorizo la colaboración con el cliente, fomentando una comunicación abierta",
+        "description": ""
+      },
+      "2": {
+        "title": "Soy muy flexible con las zonas horarias",
+        "description": ""
+      },
+      "3": {
+        "title": "Mi stack de tecnologías",
+        "description": "Siempre intento mejorar"
+      },
+      "4": {
+        "title": "Entusiasta de la tecnología con una pasión por el desarrollo de productos.",
+        "description": ""
+      },
+      "5": {
+        "title": "Estoy aprendiendo a crear contratos inteligentes con Solidity",
+        "description": "En el presente"
+      },
+      "6": {
+        "title": "¿Quieres empezar un proyecto juntos?",
+        "description": ""
+      }
+    },
+    "projects": {
+      "1": {
+        "title": "TalkSmart - Un chat con IA",
+        "description": "Chat con IA para conversar en otros idiomas, con traducción instantánea y explicaciones de contexto."
+      },
+      "2": {
+        "title": "Trackiify - Gestor de Rutinas",
+        "description": "Gestor de rutinas con dashboards para entrenadores y clientes y bot de WhatsApp para seguimiento automatizado."
+      },
+      "3": {
+        "title": "Habitify - Tracker de Hábitos",
+        "description": "Aplicación de rastreo de hábitos diseñada para ayudar a los usuarios a construir y mantener rutinas saludables."
+      },
+      "4": {
+        "title": "Carrusel complejo animado",
+        "description": "Carrusel animado con líneas de tiempo de GSAP, múltiples animaciones y efectos de máscara con clip-path."
+      }
+    },
+    "testimonials": {
+      "1": {
+        "quote": "Tuve la oportunidad de supervisar a Martin durante su tiempo en el equipo y fue una experiencia muy positiva. Desde el primer momento demostró una gran proactividad y compromiso, especialmente en el desarrollo Front-End. Se destacó por su capacidad para resolver problemas de forma autónoma y por su disposición constante a mejorar tanto a nivel técnico como en la dinámica del equipo. Es una persona con una actitud muy profesional, con la que da gusto trabajar.",
+        "name": "Ignacio Martín Lopez",
+        "title": "Lider Front End SwaplyAr"
+      },
+      "2": {
+        "quote": "Colaborar con Martin fue un verdadero placer. Su profesionalismo, rapidez y dedicación para obtener resultados excepcionales fueron evidentes durante todo nuestro proyecto. El entusiasmo de Martin por cada faceta del desarrollo es realmente excepcional. Si buscas impulsar tu sitio web y tu marca, Martin es el socio ideal.",
+        "name": "Oa Suarez",
+        "title": "CPO SwaplyAr"
+      }
+    },
+    "workExperience": {
+      "1": {
+        "title": "Desarrollador Frontend",
+        "description": "Conversión de diseños de Figma en código con fidelidad y eficiencia, mejorando la experiencia del usuario e incorporando animaciones con GSAP. Refactorización de código e implementación de buenas prácticas."
+      },
+      "2": {
+        "title": "Ingeniero Full Stack Blockchain",
+        "description": "Dominio de flujos de backend con Nest.js y express, tecnologías Blockchain, Web3, React Testing Library, Jest, Playwright, Storybook, CI/CD, pipelines, performance con SSR/ISR y code splitting."
+      },
+      "3": {
+        "title": "Arquitecto de Frontend",
+        "description": "Responsable de la autenticación, creacion de layouts, arquitectura de URLs e implementación de sistemas multilingües, optimizando los flujos de acceso. Optimización de la puntuación de Lighthouse y de SEO."
+      },
+      "4": {
+        "title": "Experiencia en DevOps",
+        "description": "Gestión de almacenamiento S3 (Cloudflare R2), orquestación con Docker, test E2E con CI/CD con GitHub Actions, deploy de bases de datos como PostgreSQL, supabase, mongodb con atlas y redis."
+      }
+    }
+  },
+  "RecentProjects": {
+    "heading": {
+      "part1": "Una pequeña selección de",
+      "part2": "proyectos recientes"
+    }
+  },
+  "Approach": {
+    "heading": {
+      "part1": "Mi",
+      "part2": "enfoque"
+    },
+    "cards": {
+      "1": {
+        "title": "Planificación & Estrategia",
+        "button": "Fase 1",
+        "description": "Trabajaremos juntos para mapear los objetivos, audiencia objetivo y funcionalidades clave de su sitio web. Discutiremos aspectos como la estructura del sitio, diseño, arquitectura, navegación y requisitos de contenido."
+      },
+      "2": {
+        "title": "Desarrollo De Arquitectura, Diseño y Flujos de Usuario",
+        "button": "Fase 2",
+        "description": "Una vez que acordemos el plan, me pongo a trabajar. Implementaré la arquitectura, diseño y flujos de su sitio web, asegurando que sea funcional, eficiente y atractivo. Documentaré cada paso del proceso."
+      },
+      "3": {
+        "title": "Desarrollo y Lanzamiento",
+        "button": "Fase 3",
+        "description": "Este es el momento en el que la magia sucede. Basado en la documentación y el plan, traduciré la arquitectura, diseño y flujos de su sitio web en código funcional, construyendo su sitio web desde cero."
+      }
+    }
+  },
+  "Clients": {
+    "heading": {
+      "part1": "Palabras amables de",
+      "part2": "clientes satisfechos"
+    }
+  },
+  "Footer": {
+    "heading": {
+      "part1": "Listo para llevar",
+      "part2": "tu presencia digital",
+      "part3": "al siguiente nivel?"
+    },
+    "contactText": "Contactame hoy y discutamos cómo puedo ayudarte a alcanzar tus objetivos.",
+    "button": "Contactame",
+    "altGrid": "grid",
+    "copyright": "Copyright © {year}",
+    "authorName": "tinchx1"
+  },
+  "Experience": {
+    "heading": {
+      "part1": "Mi",
+      "part2": "experiencia laboral"
+    }
+  }
+}

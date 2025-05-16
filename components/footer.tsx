@@ -5,14 +5,17 @@ import { FaLocationArrow } from 'react-icons/fa6'
 import { MagicButton } from '@/components/ui/magic-button'
 import { links } from '@/config'
 import { socialMedia } from '@/data'
+import { useTranslations } from 'next-intl'
 
 export const Footer = () => {
+  const t = useTranslations('Footer')
+  const year = new Date().getFullYear()
   return (
     <footer id="contact" className="mb-[100px] w-full pb-10 md:mb-auto">
       <div className="absolute -bottom-72 left-0 min-h-96 w-full">
         <Image
           src="/footer-grid.svg"
-          alt="grid"
+          alt={t('altGrid')}
           className="h-full w-full opacity-50"
           width={1260}
           height={863}
@@ -21,13 +24,13 @@ export const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          {t('heading.part1')}{' '}
+          <span className="text-purple">{t('heading.part2')}</span>{' '}
+          {t('heading.part3')}
         </h1>
 
         <p className="my-5 text-center text-white-200 md:mt-10">
-          Reach out to me today and let&apos;s discuss how I can help your
-          achieve your goals.
+          {t('contactText')}
         </p>
 
         <Link
@@ -37,7 +40,7 @@ export const Footer = () => {
           className="md:mt-10"
         >
           <MagicButton
-            title="Let's get in touch"
+            title={t('button')}
             icon={<FaLocationArrow />}
             position="right"
             asChild
@@ -47,19 +50,15 @@ export const Footer = () => {
 
       <div className="relative z-[999] mt-16 flex flex-col items-center justify-between md:flex-row">
         <p className="text-sm font-light md:text-base md:font-normal">
-          Copyright &copy; {new Date().getFullYear()}{' '}
+          {t('copyright', { year })}{' '}
           <Link
             href="https://github.com/tinchx1"
             target="_blank"
             rel="noreferrer noopener"
             className="text-purple"
           >
-            tinchx1
-          </Link>{' '}
-          {/* |{' '} */}
-          {/* <Link href={links.sourceCode} className="underline">
-            Source Code
-          </Link> */}
+            {t('authorName')}
+          </Link>
         </p>
 
         <div className="flex items-center gap-6 md:gap-3">

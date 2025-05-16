@@ -3,17 +3,21 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
-import Lottie from 'lottie-react'
+import dynamic from 'next/dynamic'
 
 import { links } from '@/config'
 import { techStack } from '@/data'
 import animationData from '@/data/confetti.json'
 import { cn } from '@/lib/utils'
 
+import { useTranslations } from 'next-intl'
+
 import { BackgroundGradientAnimation } from './background-gradient-animation'
 import { MagicButton } from './magic-button'
 
 import { GridGlobe } from '../grid-globe'
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false })
 
 export const BentoGrid = ({
   className,
@@ -37,22 +41,19 @@ export const BentoGrid = ({
 export const BentoGridItem = ({
   id,
   className,
-  title,
-  description,
   img,
   imgClassName,
   titleClassName,
   spareImg
 }: {
-  id?: number;
+  id: number;
   className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const t = useTranslations('data.gridItems')
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -121,11 +122,11 @@ export const BentoGridItem = ({
           )}
         >
           <div className="z-10 font-sans text-sm font-extralight text-[#c1c2d3] md:text-xs lg:text-base">
-            {description}
+            {t(`${id}.description`)}
           </div>
 
           <div className="z-10 max-w-96 font-sans text-lg font-bold lg:text-3xl">
-            {title}
+            {t(`${id}.title`)}
           </div>
 
           {id === 2 && <GridGlobe />}
@@ -166,14 +167,10 @@ export const BentoGridItem = ({
                 className="pointer-events-none absolute -bottom-5 right-0 cursor-default"
               >
                 <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: 'xMidYMid slice'
-                    }
-                  }}
+                  animationData={animationData}
+                  loop={copied}
+                  autoplay={copied}
+                  rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
               </button>
 

@@ -8,27 +8,30 @@ import {
 } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 import { navItems } from '@/data'
 import { cn } from '@/lib/utils'
+import { useLocale, useTranslations } from 'next-intl'
 
 type FloatingNavProps = {
-  navItems: typeof navItems;
   className?: string;
 };
 type NavItem = {
-  name: string;
+  key: string;
   link: string;
 };
-export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
+export const FloatingNav = ({ className }: FloatingNavProps) => {
+  const t = useTranslations('data.navItems')
   const { scrollY } = useScroll()
-
+  const router = useRouter()
+  const locale = useLocale()
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
   useMotionValueEvent(scrollY, 'change', (current) => {
     if (typeof current === 'number') {
-       if (current < 50) {
+      if (current < 50) {
         setVisible(true)
       } else {
         if (current > lastScrollY) {
@@ -69,21 +72,23 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
               'relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300'
             )}
           >
-            <span className="!cursor-pointer text-sm">{navItem.name}</span>
+            <span className="!cursor-pointer text-sm">{t(navItem.key)}</span>
           </Link>
         ))}
         <select
           id="locale-select"
+          defaultValue={locale}
           className={cn(
             'relative bg-transparent text-sm block px-1 py-2 outline-none transition text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300',
             'focus:text-neutral-900 dark:focus:text-neutral-50'
           )}
           onChange={(e) => {
-            console.log(e.target.value)
+            document.cookie = `NEXT_LOCALE=${e.currentTarget.value}; path=/`
+            router.refresh()
           }}
         >
           <option value="es" className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50">ES</option>
-          <option value="eng" className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50">EN</option>
+          <option value="en" className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50">EN</option>
         </select>
       </motion.nav>
     </AnimatePresence>
