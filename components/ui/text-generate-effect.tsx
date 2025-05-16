@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 export const TextGenerateEffect = ({
   words,
-  className,
+  className
   // key
 }: {
   words: string;

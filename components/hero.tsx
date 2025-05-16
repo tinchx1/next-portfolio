@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 
 export const Hero = () => {
   const t = useTranslations('Hero')
+
   return (
     <div className="pb-20 pt-36">
       <div>

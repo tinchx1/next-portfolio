@@ -10,6 +10,7 @@ import { PinContainer } from './ui/3d-pin'
 export const RecentProjects = () => {
   const tHeading = useTranslations('RecentProjects')
   const t = useTranslations('data.projects')
+
   return (
     <section id="projects" className="py-20">
       <h1 className="heading">

@@ -9,6 +9,7 @@ import { MagicButton } from '@/components/ui/magic-button'
 
 export const Approach = () => {
   const t = useTranslations('Approach')
+
   return (
     <section className="w-full py-20">
       <h1 className="heading">

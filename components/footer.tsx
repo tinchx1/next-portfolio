@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl'
 export const Footer = () => {
   const t = useTranslations('Footer')
   const year = new Date().getFullYear()
+
   return (
     <footer id="contact" className="mb-[100px] w-full pb-10 md:mb-auto">
       <div className="absolute -bottom-72 left-0 min-h-96 w-full">

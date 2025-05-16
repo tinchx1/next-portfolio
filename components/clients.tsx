@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 
 export const Clients = () => {
   const t = useTranslations('Clients')
+
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
