@@ -50,7 +50,7 @@ export const Footer = () => {
       </div>
 
       <div className="relative z-[999] mt-16 flex flex-col items-center justify-between md:flex-row">
-        <p className="text-sm font-light md:text-base md:font-normal">
+        <p className="mb-2 text-sm font-light md:mb-0 md:text-base md:font-normal">
           {t('copyright', { year })}{' '}
           <Link
             href="https://github.com/tinchx1"
