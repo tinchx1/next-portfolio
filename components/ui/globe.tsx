@@ -66,12 +66,12 @@ let numbersOfRings = [0]
 export const Globe = ({ globeConfig, data }: WorldProps) => {
   const [globeData, setGlobeData] = useState<
     | {
-        size: number;
-        order: number;
-        color: (t: number) => string;
-        lat: number;
-        lng: number;
-      }[]
+      size: number;
+      order: number;
+      color: (t: number) => string;
+      lat: number;
+      lng: number;
+    }[]
     | null
   >(null)
 
@@ -99,7 +99,7 @@ export const Globe = ({ globeConfig, data }: WorldProps) => {
       _buildData()
       _buildMaterial()
     }
-     
+
   }, [globeRef.current])
 
   const _buildMaterial = () => {
@@ -169,7 +169,7 @@ export const Globe = ({ globeConfig, data }: WorldProps) => {
         })
       startAnimation()
     }
-     
+
   }, [globeData])
 
   const startAnimation = () => {
@@ -195,14 +195,14 @@ export const Globe = ({ globeConfig, data }: WorldProps) => {
 
     globeRef.current
       .pointsData(globeData)
-      .pointColor((d: { color: (t: number) => string }) => d.color(0))
+      .pointColor((d: any) => d.color(0))
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2)
 
     globeRef.current
       .ringsData(globeData)
-      .ringColor((d: { color: (t: number) => string }) => d.color(0))
+      .ringColor((d: any) => d.color(0))
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(
@@ -300,10 +300,10 @@ export const hexToRgb = (hex: string) => {
 
   return result
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
-      }
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    }
     : null
 }
 
