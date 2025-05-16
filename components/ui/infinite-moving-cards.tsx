@@ -93,7 +93,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[90vw] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-800 p-5 md:w-[60vw] md:p-16"
+            className="relative w-[90vw] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-800 p-5 md:w-[50vw] md:p-16"
             style={{
               background: 'rgb(4,7,29)',
               backgroundColor:
@@ -101,20 +101,20 @@ export const InfiniteMovingCards = ({
             }}
             key={idx}
           >
-            <blockquote>
+            <blockquote className='flex flex-col justify-between h-full'>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               />
-              <span className=" relative z-20 text-sm font-normal leading-[1.6] text-white md:text-lg">
-                {t(`${item.id}.quote`)}
+              <span className="relative z-20 text-sm font-normal leading-[1.6] text-white md:text-lg">
+                "{t(`${item.id}.quote`)}"
               </span>
 
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <div className="me-3">
                   <Image
-                    height={50}
-                    width={50}
+                    height={60}
+                    width={60}
                     src={item.img}
                     alt={t(`${item.id}.name`)}
                   />
