@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from 'react'
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from 'three'
 import ThreeGlobe from 'three-globe'
 import type { ThreeElement } from '@react-three/fiber'
-
 import countries from '@/data/globe.json'
 
 declare module '@react-three/fiber' {
@@ -195,6 +194,7 @@ export const Globe = ({ globeConfig, data }: WorldProps) => {
 
     globeRef.current
       .pointsData(globeData)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .pointColor((d: any) => d.color(0))
       .pointsMerge(true)
       .pointAltitude(0.0)
@@ -202,6 +202,7 @@ export const Globe = ({ globeConfig, data }: WorldProps) => {
 
     globeRef.current
       .ringsData(globeData)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .ringColor((d: any) => d.color(0))
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
