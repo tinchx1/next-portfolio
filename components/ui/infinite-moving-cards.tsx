@@ -101,7 +101,7 @@ export const InfiniteMovingCards = ({
             }}
             key={idx}
           >
-            <blockquote className='flex flex-col justify-between h-full'>
+            <blockquote className='flex flex-col h-full'>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
@@ -111,7 +111,7 @@ export const InfiniteMovingCards = ({
               </span>
 
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                <div className="me-3">
+                <div className="me-3 rounded-full overflow-hidden">
                   <Image
                     height={60}
                     width={60}
