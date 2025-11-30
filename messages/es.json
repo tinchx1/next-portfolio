@@ -31,7 +31,7 @@
         "description": "Siempre intento mejorar"
       },
       "4": {
-        "title": "Entusiasta de la tecnología con una pasión por el desarrollo de productos.",
+        "title": "Entusiasta de la tecnología con una pasión por el desarrollo de productos y la experiencia del usuario.",
         "description": ""
       },
       "5": {
@@ -59,6 +59,14 @@
       "4": {
         "title": "Carrusel complejo animado",
         "description": "Carrusel animado con líneas de tiempo de GSAP, múltiples animaciones y efectos de máscara con clip-path."
+      },
+      "5": {
+        "title": "APIA - Red Social para Parques Industriales",
+        "description": "App para crear posteos con perfiles, comunidades, chat en tiempo real, anuncios y notificaciones."
+      },
+      "6": {
+        "title": "PLYAZ - Plataforma para Inversión en Atletas",
+        "description": "Plataforma diseñada para ayudar a los fans a invertir en campañas de sus atletas favoritos."
       }
     },
     "testimonials": {
@@ -71,6 +79,11 @@
         "quote": "Durante su tiempo en SwaplyAr, Martin se integró rápidamente a los flujos de producto y comprendió con precisión los requisitos funcionales. Su enfoque orientado a resultados y su ejecución técnica consistente aceleraron entregas clave sin comprometer la calidad. Además, propuso mejoras proactivas que impactaron positivamente la experiencia de usuario. Es un colaborador altamente recomendable por su rapidez, claridad técnica y responsabilidad profesional.",
         "name": "Oa Johan Javier Suarez Merchan",
         "title": "CPO (Chief Product Officer) SwaplyAr"
+      },
+      "3": {
+        "quote": "Martin tiene muchas cualidades sólidas que lo convierten en un miembro valioso del equipo: proactivo, investigador diligente, excelente comunicación escrita, resolución de problemas reflexiva, aprendizaje rápido y escribe código limpio y mantenible. Demuestra un interés genuino en el proyecto y está motivado para ayudar a impulsarlo.",
+        "name": "PLYAZ",
+        "title": "CTO en PLYAZ"
       }
     },
     "workExperience": {

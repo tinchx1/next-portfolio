@@ -11,7 +11,7 @@ export const Experience = () => {
   const tWork = useTranslations('data.workExperience')
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 flex flex-col gap-4">
       <h1 className="heading">
         {tExp('heading.part1')}{' '}
         <span className="text-purple">{tExp('heading.part2')}</span>
@@ -33,7 +33,7 @@ export const Experience = () => {
                 width={131}
                 src={nameImg}
                 alt={name}
-                className="w-20 md:w-24"
+                className={`w-20 md:w-24 ${id === 2 ? 'w-8' : ''}`}
               />
             </Link>
           </div>

@@ -31,7 +31,7 @@
         "description": "I always try to improve"
       },
       "4": {
-        "title": "Technology enthusiast with a passion for product development.",
+        "title": "Technology enthusiast with a passion for product development and user experience.",
         "description": ""
       },
       "5": {
@@ -59,6 +59,14 @@
       "4": {
         "title": "Complex animated carousel",
         "description": "Animated carousel with GSAP timelines, multiple animations, and mask effects with clip-path."
+      },
+      "5": {
+        "title": "APIA - Social Network for Industrial Parks",
+        "description": "App designed to create communities, with professional profiles, posts, real-time chat, ads and notifications."
+      },
+      "6": {
+        "title": "PLYAZ - Platform for Investment in Athletes",
+        "description": "Platform designed to help fans invest in the campaigns of their favorite athletes."
       }
     },
     "testimonials": {
@@ -71,6 +79,11 @@
         "quote": "During his time at SwaplyAr, Martin quickly integrated into product workflows and accurately understood functional requirements. His results-oriented approach and consistent technical execution accelerated key deliveries without compromising quality. He also proposed proactive improvements that positively impacted the user experience. He is a highly recommended collaborator for his speed, technical clarity, and professional responsibility.",
         "name": "Oa Johan Javier Suarez Merchan",
         "title": "CPO (Chief Product Officer) at SwaplyAr"
+      },
+      "3": {
+        "quote": "Martin has many strong qualities that make him a valuable team member: proactive, diligent researcher, excellent written communication, thoughtful problem-solving, quick learner, and writes clean, maintainable code. He demonstrates genuine interest in the project and is motivated to help drive it forward.",
+        "name": "PLYAZ",
+        "title": "CTO at PLYAZ"
       }
     },
     "workExperience": {

@@ -72,19 +72,33 @@ export const projects = [
     link: 'https://www.trackiify.com',
     sourceCode: 'https://github.com/tinchx1'
   },
+  // {
+  //   id: 3,
+  //   img: '/p3.svg',
+  //   iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/nestjs.svg', '/postgresql.svg'],
+  //   link: 'https://habitifytracker.vercel.app',
+  //   sourceCode: 'https://github.com/tinchx1'
+  // },
+  // {
+  //   id: 4,
+  //   img: '/p4.svg',
+  //   iconLists: ['/vue.svg', '/nuxt.svg', '/tail.svg', '/ts.svg', '/gsap.svg'],
+  //   link: 'https://challenge-nuxt-gsap.vercel.app',
+  //   sourceCode: 'https://github.com/tinchx1/challenge-nuxt-gsap'
+  // },
   {
-    id: 3,
-    img: '/p3.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/nestjs.svg', '/postgresql.svg'],
-    link: 'https://habitifytracker.vercel.app',
+    id: 5,
+    img: '/p5.png',
+    iconLists: ['/next.svg', '/sass.png', '/ts.svg', '/express.svg', '/postgresql.svg'],
+    link: 'https://www.apia.grupodelsud.com',
     sourceCode: 'https://github.com/tinchx1'
   },
   {
-    id: 4,
-    img: '/p4.svg',
-    iconLists: ['/vue.svg', '/nuxt.svg', '/tail.svg', '/ts.svg', '/gsap.svg'],
-    link: 'https://challenge-nuxt-gsap.vercel.app',
-    sourceCode: 'https://github.com/tinchx1/challenge-nuxt-gsap'
+    id: 6,
+    img: '/p6.png',
+    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/nestjs.svg', '/postgresql.svg', "/turborepo.png"],
+    link: 'https://www.plyaz.net',
+    sourceCode: 'https://github.com/tinchx1'
   }
 ] as const
 
@@ -96,6 +110,10 @@ export const testimonials = [
   {
     id: 2,
     img: "/oa.svg"
+  },
+  {
+    id: 3,
+    img: "/plyaz.png"
   }
   // {
   //   quote: `Collaborating with ${links.ownerName} was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. ${links.ownerName}'s enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, ${links.ownerName} is the ideal partner.`,
@@ -130,15 +148,13 @@ export const companies = [
     id: 2,
     name: 'PLYAZ',
     link: 'https://bento.me/plyaz',
-    // img: '/plyaz.png',
-    nameImg: '/plyazLogo.png'
+    nameImg: '/plyaz.svg'
   },
   {
     id: 3,
-    name: 'Upwork',
-    // img: '/upwork.svg',
-    link: 'https://www.upwork.com/freelancers/~01af98ca2cd428a73f',
-    nameImg: '/upwork.svg'
+    name: 'Delsud',
+    link: 'https://grupodelsud.com/',
+    nameImg: '/delsud.svg'
   },
   // {
   //   id: 4,
