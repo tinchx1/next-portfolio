@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { siteConfig } from '@/config'
 import { getLocale } from 'next-intl/server'
 import { ThemeProvider } from './provider'
+import { Analytics } from "@vercel/analytics/next"
 
 import './globals.css'
 
@@ -26,6 +27,7 @@ const RootLayout = async ({ children }: Readonly<PropsWithChildren>) => {
         <NextIntlClientProvider>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           {children}
+          <Analytics />
         </ThemeProvider>
         </NextIntlClientProvider>
       </body>
