@@ -67,6 +67,14 @@
       "6": {
         "title": "PLYAZ - Platform for Investment in Athletes",
         "description": "Platform designed to help fans invest in the campaigns of their favorite athletes."
+      },
+      "7": {
+        "title": "Flexy - Rental Platform",
+        "description": "Platform to search, publish, and manage rentals quickly and easily."
+      },
+      "8": {
+        "title": "Desarrollos Delsud - Admin Dashboard",
+        "description": "Admin dashboard to manage clients, bookings, lots, cash flow, and reports."
       }
     },
     "testimonials": {

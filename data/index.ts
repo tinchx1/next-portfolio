@@ -99,6 +99,20 @@ export const projects = [
     iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/nestjs.svg', '/postgresql.svg', "/turborepo.png"],
     link: 'https://www.plyaz.net',
     sourceCode: 'https://github.com/tinchx1'
+  },
+  {
+    id: 7,
+    img: '/p7.png',
+    iconLists: ['/re.svg', '/react-query.svg', '/sass.png', '/express.svg', '/postgresql.svg'],
+    link: 'https://github.com/tinchx1',
+    sourceCode: 'https://github.com/tinchx1'
+  },
+  {
+    id: 8,
+    img: '/p8.png',
+    iconLists: ['/re.svg', '/react-query.svg', '/sass.png', '/express.svg', '/postgresql.svg'],
+    link: 'https://github.com/tinchx1',
+    sourceCode: 'https://github.com/tinchx1'
   }
 ] as const
 
