@@ -75,6 +75,14 @@
       "8": {
         "title": "Desarrollos Delsud - Panel Administrativo",
         "description": "Dashboard administrativo para gestionar clientes, reservas, loteos, caja y reportes."
+      },
+      "9": {
+        "title": "Plataforma de cotización de seguros",
+        "description": "Flujo de 4 pasos en el frontend, orquestador paralelo de 7 APIs de aseguradoras en el backend."
+      },
+      "10": {
+        "title": "App móvil de enfoque y rachas",
+        "description": "App React Native para rachas diarias, hitos de progreso y sesiones guiadas con animaciones Lottie."
       }
     },
     "testimonials": {

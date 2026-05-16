@@ -75,6 +75,14 @@
       "8": {
         "title": "Desarrollos Delsud - Admin Dashboard",
         "description": "Admin dashboard to manage clients, bookings, lots, cash flow, and reports."
+      },
+      "9": {
+        "title": "Insurance Quoting Platform",
+        "description": "4-step frontend flow with a parallel backend orchestrator across 7 insurer APIs."
+      },
+      "10": {
+        "title": "Focus & Streak Mobile App",
+        "description": "React Native app for daily focus streaks, milestones, and guided sessions with Lottie animations."
       }
     },
     "testimonials": {
