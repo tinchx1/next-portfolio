@@ -24,9 +24,9 @@ export const gridItems = [
   },
   {
     id: 3,
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
+    className: 'lg:col-span-2 md:col-span-3 md:row-span-2 min-h-[26rem] md:min-h-[28rem]',
     imgClassName: '',
-    titleClassName: 'justify-center',
+    titleClassName: 'justify-start',
     img: '',
     spareImg: ''
   },
@@ -117,8 +117,8 @@ export const projects = [
       "/express.svg",
       "/postgresql.svg",
     ],
-    link: "https://github.com/tinchx1",
-    sourceCode: "https://github.com/tinchx1",
+    link: "https://github.com/tinchx1/red-social-front",
+    sourceCode: "https://github.com/tinchx1/red-social-front",
   },
   {
     id: 6,
@@ -144,8 +144,8 @@ export const projects = [
       "/express.svg",
       "/postgresql.svg",
     ],
-    link: "https://github.com/tinchx1",
-    sourceCode: "https://github.com/tinchx1",
+    link: "https://flexy.com.ar/",
+    sourceCode: "https://github.com/tinchx1/rental-dashboard",
   },
   {
     id: 8,
@@ -157,15 +157,15 @@ export const projects = [
       "/express.svg",
       "/postgresql.svg",
     ],
-    link: "https://github.com/tinchx1",
-    sourceCode: "https://github.com/tinchx1",
+    link: "https://subastas.desarrollosdelsud.com.ar",
+    sourceCode: "https://github.com/tinchx1/dashboard-admin",
   },
   {
     id: 9,
     img: "/p9.png",
     iconLists: ["/re.svg", "/zustand.svg", "/sass.png", "/express.svg"],
-    link: "https://github.com/tinchx1",
-    sourceCode: "https://github.com/tinchx1",
+    link: "https://testmulticotizador.mercibroker.com.ar/",
+    sourceCode: "https://github.com/tinchx1/insurance-quoting-frontend",
   },
   {
     id: 10,
@@ -286,7 +286,73 @@ export const socialMedia = [
   }
 ] as const
 
-export const techStack = {
-  stack1: ['React.js', 'Next.js', 'Typescript'],
-  stack2: ['PostgreSQL', 'Node.js', 'Nest.js']
-} as const
+export type TechStackItem = {
+  name: string
+  icon: string
+}
+
+export type TechStackCategoryKey = 'frontend' | 'backend' | 'mobile' | 'tooling'
+
+export type TechStackCategory = {
+  key: TechStackCategoryKey
+  items: TechStackItem[]
+}
+
+const TECH_BY_ICON: Record<
+  string,
+  { name: string; category: TechStackCategoryKey }
+> = {
+  '/re.svg': { name: 'React', category: 'frontend' },
+  '/next.svg': { name: 'Next.js', category: 'frontend' },
+  '/ts.svg': { name: 'TypeScript', category: 'frontend' },
+  '/tail.svg': { name: 'Tailwind CSS', category: 'frontend' },
+  '/sass.png': { name: 'Sass', category: 'frontend' },
+  '/react-query.svg': { name: 'TanStack Query', category: 'frontend' },
+  '/zustand.svg': { name: 'Zustand', category: 'frontend' },
+  '/lottie.svg': { name: 'Lottie', category: 'frontend' },
+  '/node.svg': { name: 'Node.js', category: 'backend' },
+  '/express.svg': { name: 'Express', category: 'backend' },
+  '/nestjs.svg': { name: 'NestJS', category: 'backend' },
+  '/postgresql.svg': { name: 'PostgreSQL', category: 'backend' },
+  '/mon.svg': { name: 'MongoDB', category: 'backend' },
+  '/expo.svg': { name: 'Expo', category: 'mobile' },
+  '/turborepo.png': { name: 'Turborepo', category: 'tooling' }
+}
+
+const EXTRA_STACK_ICONS = ['/node.svg'] as const
+
+const CATEGORY_ORDER: TechStackCategoryKey[] = [
+  'frontend',
+  'backend',
+  'mobile',
+  'tooling'
+]
+
+function buildTechStack(): TechStackCategory[] {
+  const byCategory: Record<TechStackCategoryKey, TechStackItem[]> = {
+    frontend: [],
+    backend: [],
+    mobile: [],
+    tooling: []
+  }
+  const seen = new Set<string>()
+
+  const addIcon = (icon: string) => {
+    if (seen.has(icon)) return
+    const meta = TECH_BY_ICON[icon]
+    if (!meta) return
+    seen.add(icon)
+    byCategory[meta.category].push({ name: meta.name, icon })
+  }
+
+  for (const project of projects) {
+    for (const icon of project.iconLists) addIcon(icon)
+  }
+  for (const icon of EXTRA_STACK_ICONS) addIcon(icon)
+
+  return CATEGORY_ORDER.filter((key) => byCategory[key].length > 0).map(
+    (key) => ({ key, items: byCategory[key] })
+  )
+}
+
+export const techStack = buildTechStack()

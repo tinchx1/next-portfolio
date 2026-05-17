@@ -6,7 +6,7 @@ import { IoCopyOutline } from 'react-icons/io5'
 import dynamic from 'next/dynamic'
 
 import { links } from '@/config'
-import { techStack } from '@/data'
+import { TechStackDisplay } from '@/components/tech-stack-display'
 import animationData from '@/data/confetti.json'
 import { cn } from '@/lib/utils'
 
@@ -118,47 +118,31 @@ export const BentoGridItem = ({
         <div
           className={cn(
             'relative flex min-h-40 flex-col p-5 px-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:p-10',
+            id === 3 && 'justify-start',
             titleClassName
           )}
         >
-          <div className="z-10 font-sans text-sm font-extralight text-[#c1c2d3] md:text-xs lg:text-base">
+          <div
+            className={cn(
+              'z-10 font-sans text-sm font-extralight text-[#c1c2d3] md:text-xs lg:text-base',
+              id === 3 && 'mb-1 shrink-0'
+            )}
+          >
             {t(`${id}.description`)}
           </div>
 
-          <div className="z-10 max-w-96 font-sans text-lg font-bold lg:text-3xl">
+          <div
+            className={cn(
+              'z-10 font-sans text-lg font-bold lg:text-3xl',
+              id === 3 ? 'mb-3 max-w-full shrink-0 lg:mb-4' : 'max-w-96'
+            )}
+          >
             {t(`${id}.title`)}
           </div>
 
           {id === 2 && <GridGlobe />}
 
-          {id === 3 && (
-            <div className="absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-5">
-              <div className="flex flex-col gap-3 lg:gap-8">
-                {techStack.stack1.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-lg bg-[#10132e] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
-                  >
-                    {item}
-                  </span>
-                ))}
-
-                <span className="rounded-lg bg-[#10132e] px-3 py-4 text-center" />
-              </div>
-
-              <div className="flex flex-col gap-3 lg:gap-8">
-                <span className="rounded-lg bg-[#10132e] px-3 py-4 text-center" />
-                {techStack.stack2.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-lg bg-[#10132e] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
+          {id === 3 && <TechStackDisplay className="flex-1" />}
 
           {id === 6 && (
             <div className="group relative mt-5">

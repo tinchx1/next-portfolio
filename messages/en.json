@@ -28,7 +28,15 @@
       },
       "3": {
         "title": "My technology stack",
-        "description": "I always try to improve"
+        "description": "Tools I use across my projects",
+        "stack": {
+          "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "mobile": "Mobile",
+            "tooling": "Tooling"
+          }
+        }
       },
       "4": {
         "title": "Technology enthusiast with a passion for product development and user experience.",

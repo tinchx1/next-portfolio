@@ -28,7 +28,15 @@
       },
       "3": {
         "title": "Mi stack de tecnologías",
-        "description": "Siempre intento mejorar"
+        "description": "Herramientas que uso en mis proyectos",
+        "stack": {
+          "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "mobile": "Móvil",
+            "tooling": "Herramientas"
+          }
+        }
       },
       "4": {
         "title": "Entusiasta de la tecnología con una pasión por el desarrollo de productos y la experiencia del usuario.",

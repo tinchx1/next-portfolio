@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--localstorage-file=.next/node-localstorage.json' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
