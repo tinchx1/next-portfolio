@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaLocationArrow } from 'react-icons/fa6'
 
 import { projects } from '@/data'
+import { cn } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
 
 import { PinContainer } from './ui/3d-pin'
@@ -22,7 +23,7 @@ export const RecentProjects = () => {
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-x-24 gap-y-8 p-4">
         {projects.map(
-          ({ id, iconLists, img, link, sourceCode }) => (
+          ({ id, iconLists, img, imgClassName, link, sourceCode }) => (
             <div
               key={id}
               className="flex h-[32rem] w-[90vw] items-center justify-center sm:h-[41rem] sm:w-[570px] lg:min-h-[32.5rem]"
@@ -39,11 +40,15 @@ export const RecentProjects = () => {
                   </div>
 
                   <Image
-                    height={300}
-                    width={464}
+                    height={421}
+                    width={206}
                     src={img}
                     alt={t(`${id}.title`)}
-                    className="absolute bottom-0 z-10"
+                    className={cn(
+                      'absolute bottom-0 z-10',
+                      imgClassName ??
+                        'h-auto w-full max-w-none object-cover object-bottom'
+                    )}
                   />
                 </div>
 

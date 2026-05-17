@@ -57,20 +57,41 @@ export const gridItems = [
   }
 ] as const
 
+export type Project = {
+  id: number
+  img: string
+  iconLists: readonly string[]
+  link: string
+  sourceCode: string
+  imgClassName?: string
+}
+
 export const projects = [
   {
     id: 1,
-    img: '/p1.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/express.svg', '/mon.svg'],
-    link: 'https://www.talksmart.app',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p1.svg",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/express.svg",
+      "/mon.svg",
+    ],
+    link: "https://www.talksmart.app",
+    sourceCode: "https://github.com/tinchx1",
   },
   {
     id: 2,
-    img: '/p2.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/express.svg', '/mon.svg'],
-    link: 'https://www.trackiify.com',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p2.svg",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/express.svg",
+      "/mon.svg",
+    ],
+    link: "https://www.trackiify.com",
+    sourceCode: "https://github.com/tinchx1",
   },
   // {
   //   id: 3,
@@ -88,47 +109,74 @@ export const projects = [
   // },
   {
     id: 5,
-    img: '/p5.png',
-    iconLists: ['/next.svg', '/sass.png', '/ts.svg', '/express.svg', '/postgresql.svg'],
-    link: 'https://www.apia.grupodelsud.com',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p5.png",
+    iconLists: [
+      "/next.svg",
+      "/sass.png",
+      "/ts.svg",
+      "/express.svg",
+      "/postgresql.svg",
+    ],
+    link: "https://www.apia.grupodelsud.com",
+    sourceCode: "https://github.com/tinchx1",
   },
   {
     id: 6,
-    img: '/p6.png',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/nestjs.svg', '/postgresql.svg', "/turborepo.png"],
-    link: 'https://www.plyaz.net',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p6.png",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/nestjs.svg",
+      "/postgresql.svg",
+      "/turborepo.png",
+    ],
+    link: "https://www.plyaz.net",
+    sourceCode: "https://github.com/tinchx1",
   },
   {
     id: 7,
-    img: '/p7.png',
-    iconLists: ['/re.svg', '/react-query.svg', '/sass.png', '/express.svg', '/postgresql.svg'],
-    link: 'https://github.com/tinchx1',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p7.png",
+    iconLists: [
+      "/re.svg",
+      "/react-query.svg",
+      "/sass.png",
+      "/express.svg",
+      "/postgresql.svg",
+    ],
+    link: "https://github.com/tinchx1",
+    sourceCode: "https://github.com/tinchx1",
   },
   {
     id: 8,
-    img: '/p8.png',
-    iconLists: ['/re.svg', '/react-query.svg', '/sass.png', '/express.svg', '/postgresql.svg'],
-    link: 'https://github.com/tinchx1',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p8.png",
+    iconLists: [
+      "/re.svg",
+      "/react-query.svg",
+      "/sass.png",
+      "/express.svg",
+      "/postgresql.svg",
+    ],
+    link: "https://github.com/tinchx1",
+    sourceCode: "https://github.com/tinchx1",
   },
   {
     id: 9,
-    img: '/p9.png',
-    iconLists: ['/re.svg', '/node.svg', '/express.svg'],
-    link: 'https://github.com/tinchx1',
-    sourceCode: 'https://github.com/tinchx1'
+    img: "/p9.png",
+    iconLists: ["/re.svg", "/zustand.svg", "/express.svg"],
+    link: "https://github.com/tinchx1",
+    sourceCode: "https://github.com/tinchx1",
   },
   {
     id: 10,
-    img: '/p10.png',
-    iconLists: ['/re.svg', '/expo.svg', '/tail.svg', '/lottie.svg'],
-    link: 'https://github.com/tinchx1',
-    sourceCode: 'https://github.com/tinchx1'
-  }
-] as const
+    img: "/p10.png",
+    imgClassName:
+      "absolute bottom-0 left-1/2 z-10 h-[92%] w-auto max-w-[42%] -translate-x-1/2 object-contain",
+    iconLists: ["/re.svg", "/expo.svg", "/tail.svg", "/lottie.svg"],
+    link: "https://github.com/tinchx1",
+    sourceCode: "https://github.com/tinchx1",
+  },
+] satisfies readonly Project[]
 
 export const testimonials = [
   {
