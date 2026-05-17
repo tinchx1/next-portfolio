@@ -117,7 +117,7 @@ export const projects = [
       "/express.svg",
       "/postgresql.svg",
     ],
-    link: "https://www.apia.grupodelsud.com",
+    link: "https://github.com/tinchx1",
     sourceCode: "https://github.com/tinchx1",
   },
   {
@@ -163,7 +163,7 @@ export const projects = [
   {
     id: 9,
     img: "/p9.png",
-    iconLists: ["/re.svg", "/zustand.svg", "/express.svg"],
+    iconLists: ["/re.svg", "/zustand.svg", "/sass.png", "/express.svg"],
     link: "https://github.com/tinchx1",
     sourceCode: "https://github.com/tinchx1",
   },
@@ -176,7 +176,7 @@ export const projects = [
     link: "https://github.com/tinchx1",
     sourceCode: "https://github.com/tinchx1",
   },
-] satisfies readonly Project[]
+] satisfies readonly Project[];
 
 export const testimonials = [
   {

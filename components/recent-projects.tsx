@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { FaLocationArrow } from 'react-icons/fa6'
 
 import { projects } from '@/data'
-import { cn } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
 
 import { PinContainer } from './ui/3d-pin'
@@ -40,15 +39,11 @@ export const RecentProjects = () => {
                   </div>
 
                   <Image
-                    height={421}
-                    width={206}
+                    height={imgClassName ? 421 : 300}
+                    width={imgClassName ? 206 : 464}
                     src={img}
                     alt={t(`${id}.title`)}
-                    className={cn(
-                      'absolute bottom-0 z-10',
-                      imgClassName ??
-                        'h-auto w-full max-w-none object-cover object-bottom'
-                    )}
+                    className={imgClassName ?? 'absolute bottom-0 z-10'}
                   />
                 </div>
 
