@@ -173,7 +173,7 @@ export const projects = [
     imgClassName:
       "absolute bottom-0 left-1/2 z-10 h-[92%] w-auto max-w-[42%] -translate-x-1/2 object-contain",
     iconLists: ["/re.svg", "/expo.svg", "/tail.svg", "/lottie.svg"],
-    link: "https://github.com/tinchx1",
+    link: "https://apps.apple.com/us/app/unbound-focus-control/id6771602877",
     sourceCode: "https://github.com/tinchx1",
   },
 ] satisfies readonly Project[];
