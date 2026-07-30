@@ -31,21 +31,28 @@ export const InfiniteMovingCards = ({
 
   const getCardStep = () => {
     const card = scrollerRef.current?.querySelector('li')
+
     if (!card || !scrollerRef.current) return 0
+
     const styles = window.getComputedStyle(scrollerRef.current)
     const gap = parseFloat(styles.columnGap || styles.gap) || 64
+
     return card.getBoundingClientRect().width + gap
   }
 
   const getLoopWidth = () => {
     if (!scrollerRef.current) return 0
+
     return scrollerRef.current.scrollWidth / 2
   }
 
   const wrapOffset = (value: number, loop: number) => {
     if (loop <= 0) return 0
+
     let next = ((value % loop) + loop) % loop
+
     if (next > loop / 2) next -= loop
+
     return next
   }
 
@@ -53,9 +60,11 @@ export const InfiniteMovingCards = ({
     const track = trackRef.current
     const amount = getCardStep()
     const loop = getLoopWidth()
+
     if (!track || !amount) return
 
     setManualPause(true)
+
     if (resumeTimer.current) clearTimeout(resumeTimer.current)
 
     const sign = direction === 'right' ? 1 : -1
@@ -65,6 +74,7 @@ export const InfiniteMovingCards = ({
 
     // Snap without transition when wrapping; animate one-card steps
     const wrapped = Math.abs(next - current) > amount * 1.5
+
     track.style.transition = wrapped ? 'none' : 'transform 0.45s ease-out'
     track.style.transform = `translateX(${next}px)`
 
@@ -133,6 +143,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation()
+
     return () => {
       if (resumeTimer.current) clearTimeout(resumeTimer.current)
     }

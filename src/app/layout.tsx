@@ -27,7 +27,7 @@ const RootLayout = async ({ children }: Readonly<PropsWithChildren>) => {
         <NextIntlClientProvider>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           {children}
-          <Analytics />G
+          <Analytics />
         </ThemeProvider>
         </NextIntlClientProvider>
       </body>
