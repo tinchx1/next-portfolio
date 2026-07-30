@@ -48,7 +48,9 @@
       },
       "6": {
         "title": "¿Quieres empezar un proyecto juntos?",
-        "description": ""
+        "description": "",
+        "copyEmail": "Copiar mi email",
+        "emailCopied": "Email copiado!"
       }
     },
     "projects": {

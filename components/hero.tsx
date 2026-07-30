@@ -39,10 +39,20 @@ export const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words={t('subtitle')}
           />
-          <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl flex items-center justify-center">
-            {t('greeting', { ownerName: links.ownerName })} <img className='pl-2' src="/arg.svg" alt={t('argentinaAlt')} width={36} height={36} />
+          <p className="mb-4 flex items-center justify-center text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
+            {t('greeting', { ownerName: links.ownerName })}{' '}
+            <img
+              className="pl-2"
+              src="/arg.svg"
+              alt={t('argentinaAlt')}
+              width={36}
+              height={36}
+            />
           </p>
-          <Link href="https://www.linkedin.com/in/martin-marchionni-16104127a/" className="md:mt-10">
+          <Link
+            href="https://www.linkedin.com/in/martin-marchionni-16104127a/"
+            className="md:mt-10"
+          >
             <MagicButton
               title={t('contact')}
               icon={<FaLocationArrow />}

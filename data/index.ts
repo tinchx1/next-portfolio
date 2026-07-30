@@ -24,7 +24,7 @@ export const gridItems = [
   },
   {
     id: 3,
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-2 min-h-[26rem] md:min-h-[28rem]',
+    className: 'lg:col-span-2 md:col-span-3 md:row-span-2 min-h-[30rem] md:min-h-[32rem]',
     imgClassName: '',
     titleClassName: 'justify-start',
     img: '',
@@ -300,26 +300,36 @@ export type TechStackCategory = {
 
 const TECH_BY_ICON: Record<
   string,
-  { name: string; category: TechStackCategoryKey }
+  { name: string; category: TechStackCategoryKey; order: number }
 > = {
-  '/re.svg': { name: 'React', category: 'frontend' },
-  '/next.svg': { name: 'Next.js', category: 'frontend' },
-  '/ts.svg': { name: 'TypeScript', category: 'frontend' },
-  '/tail.svg': { name: 'Tailwind CSS', category: 'frontend' },
-  '/sass.png': { name: 'Sass', category: 'frontend' },
-  '/react-query.svg': { name: 'TanStack Query', category: 'frontend' },
-  '/zustand.svg': { name: 'Zustand', category: 'frontend' },
-  '/lottie.svg': { name: 'Lottie', category: 'frontend' },
-  '/node.svg': { name: 'Node.js', category: 'backend' },
-  '/express.svg': { name: 'Express', category: 'backend' },
-  '/nestjs.svg': { name: 'NestJS', category: 'backend' },
-  '/postgresql.svg': { name: 'PostgreSQL', category: 'backend' },
-  '/mon.svg': { name: 'MongoDB', category: 'backend' },
-  '/expo.svg': { name: 'Expo', category: 'mobile' },
-  '/turborepo.png': { name: 'Turborepo', category: 'tooling' }
+  '/re.svg': { name: 'React', category: 'frontend', order: 0 },
+  '/next.svg': { name: 'Next.js', category: 'frontend', order: 1 },
+  '/ts.svg': { name: 'TypeScript', category: 'frontend', order: 2 },
+  '/tail.svg': { name: 'Tailwind CSS', category: 'frontend', order: 3 },
+  '/sass.png': { name: 'Sass', category: 'frontend', order: 4 },
+  '/react-query.svg': { name: 'TanStack Query', category: 'frontend', order: 5 },
+  '/zustand.svg': { name: 'Zustand', category: 'frontend', order: 6 },
+  '/fm.svg': { name: 'Framer Motion', category: 'frontend', order: 7 },
+  '/gsap.svg': { name: 'GSAP', category: 'frontend', order: 8 },
+  '/three.svg': { name: 'Three.js', category: 'frontend', order: 9 },
+  '/lottie.svg': { name: 'Lottie', category: 'frontend', order: 10 },
+  '/node.svg': { name: 'Node.js', category: 'backend', order: 0 },
+  '/express.svg': { name: 'Express', category: 'backend', order: 1 },
+  '/nestjs.svg': { name: 'NestJS', category: 'backend', order: 2 },
+  '/postgresql.svg': { name: 'PostgreSQL', category: 'backend', order: 3 },
+  '/mon.svg': { name: 'MongoDB', category: 'backend', order: 4 },
+  '/expo.svg': { name: 'Expo', category: 'mobile', order: 0 },
+  '/turborepo.png': { name: 'Turborepo', category: 'tooling', order: 0 },
+  '/dock.svg': { name: 'Docker', category: 'tooling', order: 1 }
 }
 
-const EXTRA_STACK_ICONS = ['/node.svg'] as const
+const EXTRA_STACK_ICONS = [
+  '/node.svg',
+  '/fm.svg',
+  '/gsap.svg',
+  '/three.svg',
+  '/dock.svg'
+] as const
 
 const CATEGORY_ORDER: TechStackCategoryKey[] = [
   'frontend',
@@ -351,7 +361,12 @@ function buildTechStack(): TechStackCategory[] {
   for (const icon of EXTRA_STACK_ICONS) addIcon(icon)
 
   return CATEGORY_ORDER.filter((key) => byCategory[key].length > 0).map(
-    (key) => ({ key, items: byCategory[key] })
+    (key) => ({
+      key,
+      items: byCategory[key].sort(
+        (a, b) => TECH_BY_ICON[a.icon].order - TECH_BY_ICON[b.icon].order
+      )
+    })
   )
 }
 

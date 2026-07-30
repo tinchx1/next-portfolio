@@ -118,7 +118,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             'relative flex min-h-40 flex-col p-5 px-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:p-10',
-            id === 3 && 'justify-start',
+            id === 3 && 'justify-start lg:p-8',
             titleClassName
           )}
         >
@@ -159,7 +159,7 @@ export const BentoGridItem = ({
               </button>
 
               <MagicButton
-                title={copied ? 'Email copiado!' : 'Copiar mi email'}
+                title={copied ? t('6.emailCopied') : t('6.copyEmail')}
                 icon={<IoCopyOutline />}
                 otherClasses="!bg-[#161a31]"
                 handleClick={handleCopy}

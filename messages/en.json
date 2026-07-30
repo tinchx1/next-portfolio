@@ -48,7 +48,9 @@
       },
       "6": {
         "title": "Want to start a project together?",
-        "description": ""
+        "description": "",
+        "copyEmail": "Copy my email",
+        "emailCopied": "Email copied!"
       }
     },
     "projects": {

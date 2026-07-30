@@ -18,7 +18,7 @@ export const Clients = () => {
             key={t('heading.part1')}
             items={testimonials}
             direction="right"
-            speed="slow"
+            speed="normal"
           />
 
         </div>
