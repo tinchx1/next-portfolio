@@ -27,7 +27,7 @@ export const CanvasRevealEffect = ({
   showGradient?: boolean;
 }) => {
   return (
-    <div className={cn('relative h-full w-full bg-white', containerClassName)}>
+    <div className={cn('pointer-events-none relative h-full w-full bg-white', containerClassName)}>
       <div className="h-full w-full">
         <DotMatrix
           colors={colors ?? [[0, 255, 255]]}
@@ -289,7 +289,10 @@ const ShaderMaterial: React.FC<{ source: string; uniforms: UniformConfigMap; max
 
 const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
   return (
-    <Canvas className="absolute inset-0  h-full w-full">
+    <Canvas
+      className="absolute inset-0 h-full w-full"
+      style={{ pointerEvents: 'none' }}
+    >
       <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />
     </Canvas>
   )

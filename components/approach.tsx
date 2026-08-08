@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { CanvasRevealEffect } from '@/components/ui/canvas-reveal-effect'
-import { MagicButton } from '@/components/ui/magic-button'
 import { cn } from '@/lib/utils'
 
 export const Approach = () => {
@@ -21,7 +20,7 @@ export const Approach = () => {
       <div className="my-20 flex flex-col items-center justify-center gap-4 lg:flex-row">
         <Card
           title={t('cards.1.title')}
-          icon={<MagicButton title={t('cards.1.button')} asChild />}
+          icon={<PhaseLabel label={t('cards.1.button')} />}
           description={t('cards.1.description')}
         >
           <CanvasRevealEffect
@@ -32,7 +31,7 @@ export const Approach = () => {
 
         <Card
           title={t('cards.2.title')}
-          icon={<MagicButton title={t('cards.2.button')} asChild />}
+          icon={<PhaseLabel label={t('cards.2.button')} />}
           description={t('cards.2.description')}
         >
           <CanvasRevealEffect
@@ -48,7 +47,7 @@ export const Approach = () => {
 
         <Card
           title={t('cards.3.title')}
-          icon={<MagicButton title={t('cards.3.button')} asChild />}
+          icon={<PhaseLabel label={t('cards.3.button')} />}
           description={t('cards.3.description')}
         >
           <CanvasRevealEffect
@@ -62,6 +61,12 @@ export const Approach = () => {
   )
 }
 
+const PhaseLabel = ({ label }: { label: string }) => (
+  <span className="rounded-lg border border-white/15 bg-black/40 px-7 py-3 text-sm font-medium text-white backdrop-blur-md">
+    {label}
+  </span>
+)
+
 type CardProps = {
   title: string;
   description: string;
@@ -74,9 +79,9 @@ const Card = ({ title, description, icon, children }: CardProps) => {
 
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="relative mx-auto flex h-[35rem] w-full max-w-sm items-center justify-center rounded-3xl border border-black/[0.2] p-4 dark:border-white/[0.2]"
+      onPointerEnter={() => setHovered(true)}
+      onPointerLeave={() => setHovered(false)}
+      className="relative mx-auto flex h-[35rem] w-full max-w-sm cursor-pointer items-center justify-center rounded-3xl border border-black/[0.2] p-4 dark:border-white/[0.2]"
     >
       <Icon className="absolute -left-3 -top-3 z-30 h-6 w-6 text-black dark:text-white" />
       <Icon className="absolute -bottom-3 -left-3 z-30 h-6 w-6 text-black dark:text-white" />
@@ -89,7 +94,7 @@ const Card = ({ title, description, icon, children }: CardProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 h-full w-full overflow-hidden rounded-3xl"
+            className="pointer-events-none absolute inset-0 h-full w-full overflow-hidden rounded-3xl"
           >
             {children}
           </motion.div>

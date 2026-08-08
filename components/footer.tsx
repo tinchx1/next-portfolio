@@ -12,8 +12,8 @@ export const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer id="contact" className="mb-[100px] w-full pb-10 md:mb-auto">
-      <div className="absolute -bottom-72 left-0 min-h-96 w-full">
+    <footer id="contact" className="relative mb-[100px] w-full pb-10 md:mb-auto">
+      <div className="pointer-events-none absolute -bottom-72 left-0 min-h-96 w-full">
         <Image
           src="/footer-grid.svg"
           alt={t('altGrid')}
