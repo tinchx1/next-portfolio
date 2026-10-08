@@ -77,7 +77,7 @@ export const projects = [
       "/express.svg",
       "/mon.svg",
     ],
-    link: "https://www.talksmart.app",
+    link: "https://translate-chat-demo.vercel.app",
     sourceCode: "https://github.com/tinchx1",
   },
   {
@@ -90,7 +90,7 @@ export const projects = [
       "/express.svg",
       "/mon.svg",
     ],
-    link: "https://www.trackiify.com",
+    link: "https://bot-fitness-demo.vercel.app",
     sourceCode: "https://github.com/tinchx1",
   },
   // {
@@ -117,7 +117,7 @@ export const projects = [
       "/express.svg",
       "/postgresql.svg",
     ],
-    link: "https://github.com/tinchx1/red-social-front",
+    link: "https://apia-social-demo.vercel.app",
     sourceCode: "https://github.com/tinchx1/red-social-front",
   },
   {
